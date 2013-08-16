@@ -1,5 +1,5 @@
 '''
-Based on a Stackoverflow answer by John Machin.
+Based on the Stackoverflow question "python: creating excel workbook and dumping csv files as worksheets".
 '''
 
 import csv, xlwt, os
