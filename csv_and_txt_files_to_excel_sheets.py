@@ -1,3 +1,7 @@
+'''
+Based on a Stackoverflow answer by John Machin.
+'''
+
 import csv, xlwt, os
 
 def input_from_user(prompt):
