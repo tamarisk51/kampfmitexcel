@@ -25,7 +25,7 @@ def make_an_excel_file_from_all_the_txtfiles_in_the_following_directory(director
 				ws.write(rowx, colx, value)
 			    else:
 			    	ws.write(rowx, colx, float(value))
-    return wb 
+    return wb
 
 if __name__ == '__main__':
     directory = input_from_user("Where is the data stored?:  ")
