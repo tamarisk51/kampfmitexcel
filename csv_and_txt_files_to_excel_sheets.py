@@ -16,15 +16,15 @@ def make_an_excel_file_from_all_the_txtfiles_in_the_following_directory(director
                 reader = csv.reader(csvfile, delimiter=',')
                 for rowx, row in enumerate(reader):
                     for colx, value in enumerate(row):
-			    try:
-				float(value)
-				s=False
-			    except ValueError:
-				s=True
-			    if s:
-				ws.write(rowx, colx, value)
-			    else:
-			    	ws.write(rowx, colx, float(value))
+                        try:
+                            float(value)
+                            s=False
+                        except ValueError:
+                            s=True
+                        if s:
+                            ws.write(rowx, colx, value)
+                        else:
+                            ws.write(rowx, colx, float(value))
     return wb 
 
 if __name__ == '__main__':
