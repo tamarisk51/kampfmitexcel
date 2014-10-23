@@ -1,7 +1,8 @@
 # kampfmitexcel
 
-Several Python script for taking all the text and/or csv files in a folder and making them the sheets of a single excel file.  
+A Python script for taking all the text and/or csv files in a folder and making them the sheets of a single excel file.  
 
+Two others that are specific to handling the cyclic voltammetry results from CHI potentiostat.
 
 ## Usage
 
