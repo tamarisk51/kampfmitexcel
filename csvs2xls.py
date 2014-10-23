@@ -1,6 +1,22 @@
 import sys, csv, xlwt, os
 cmdargs = str(sys.argv)
 
+
+def write_in_correct_formate(ws,rowx,colx,value):
+    """
+    Writes the values as either a float or a string, instead of just assuming everything
+    is a string.
+    """
+    try:
+        float(value)
+        s=False
+    except ValueError:
+        s=True
+    if s:
+        ws.write(rowx, colx, value)
+    else:
+        ws.write(rowx, colx, float(value))
+
 def csvs2xls(directory):
     wb = xlwt.Workbook()
     for filename in os.listdir(directory):
@@ -9,16 +25,9 @@ def csvs2xls(directory):
             with open('{}\\{}'.format(directory,filename),'rb') as csvfile:
                 reader = csv.reader(csvfile, delimiter=',')
                 for rowx, row in enumerate(reader):
-                    for colx, value in enumerate(row):
-                        try:
-                            float(value)
-                            s=False
-                        except ValueError:
-                            s=True
-                        if s:
-                            ws.write(rowx, colx, value)
-                        else:
-                            ws.write(rowx, colx, float(value))
+                     for colx, value in enumerate(row):
+                         write_in_correct_formate(ws,rowx,colx,value)
+            
     return wb 
 
 if len(sys.argv)==3:
@@ -33,6 +42,6 @@ elif len(sys.argv)==2:
     xls.save('{}\\{}{}'.format(directory,sys.argv[1],'.xls'))
     print "Your file has been saved in the data folder."
 else:
-    print "Please use this script with the following arguments:  $python csvs2xls.py C:\data\directory outputfilename."
+    print "Please use this script with the following arguments:  > python csvs2xls.py C:\data\directory outputfilename."
 
 
