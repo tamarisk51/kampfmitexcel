@@ -8,6 +8,7 @@ Several Python script for taking all the text and/or csv files in a folder and m
 csvs2xls.py
 ###
 	> python csvs2xls.py C:\data\directory outputfilename
+	 Your file has been saved in the data folder.
   	
 chi_csvs2xls.py and plot_cvs.py
 ###
