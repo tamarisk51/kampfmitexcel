@@ -11,6 +11,7 @@ csvs2xls.py
 	
 chi_csvs2xls.py
 plot_cvs.py
+###
      # This specifically for formatting results from a CHI potentiostat.
      # Adds a template 'instructions' sheet, used by the plot_cvs.py script.
 	> python chi_csvs2xls.py C:\data\directory outputfilename	 
