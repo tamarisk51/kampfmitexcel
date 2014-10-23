@@ -11,7 +11,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-datafile = 'C:\Users\James\Documents\Research\data\js140731\plotting_test.xls'
 pltop={}
 options={}
 pltinstr = [(1,pltop,'bkgrd'),(2,pltop,'analyte')]
