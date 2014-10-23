@@ -142,7 +142,7 @@ def xls2multicvplots(datafile):
 
 if len(sys.argv)==2:
     xls2multicvplots(sys.argv[1])
-    print "Your plots have been printed."
+    print "Your CVs have been plotted."
 else:
     print "Please use this script with the following arguments:  > python plot_cvs.py C:\path\to\file.xls "
                       
