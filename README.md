@@ -11,7 +11,7 @@ csvs2xls.py
   	
 chi_csvs2xls.py and plot_cvs.py
 ###
-    # This is specifically for formatting results from a CHI potentiostat.
+    # This script is specifically for formatting results from a CHI potentiostat.
 	> python chi_csvs2xls.py C:\data\directory outputfilename	 
      Your file has been saved in the data folder.
 
